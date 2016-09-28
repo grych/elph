@@ -9,7 +9,7 @@ This application is made mostly for a learning purposes, hence it is overcomplic
 Take a look at the source code!
 
 ## Author
-This software is written by Tomek 'Grych' Gryszkiewicz. Do not hestitate to contact me at mailto:grych@tg.pl or visit [my web page](http://www.tg.pl).
+This software is written by Tomek 'Grych' Gryszkiewicz. Do not hestitate to contact me at grych@tg.pl or visit [my web page](http://www.tg.pl).
 
 ## License
 The MIT License (MIT)
