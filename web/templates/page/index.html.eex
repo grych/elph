@@ -1,0 +1,145 @@
+<h4>ELPH, the Elixir XPath tester</h4>
+<div class="row">
+  <div class="col-xs-9 xpath-main">
+    <div class="form-group">
+      <label class="sr-only" for="xpath">xpath</label>
+      <div class="input-group">
+        <div class="input-group-addon hidden-xs">~x"</div>
+        <input type="text" class="form-control no-radius" id="xpath" placeholder="xpath" value="">
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-2 xpath-modifier">
+    <div class="form-group">
+      <label class="sr-only" for="xpath_modifiers">mod</label>
+      <div class="input-group">
+        <div class="input-group-addon no-radius no-left-border hidden-xs">"</div>
+        <input type="text" class="form-control" id="xpath_modifiers" placeholder="modifiers" value="">
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-1">
+    <button id="run" class="form-control btn btn-success btn-primary">Run</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <textarea id="xml" class="form-control font-console" rows="20" placeholder="paste your XML here"></textarea>
+  </div>
+
+  <div class="col-md-6">
+    <pre id="output">output</pre>
+    <p id="welcome">
+      Welcome to Elixir XPath tester and editor - the simpliest way to check you XPath expressions as you type. The output is in <a href="https://github.com/awetzel/sweet_xml">SweetXML</a> format. <br><br>
+      <button id="example">Click here</button> to get an example.
+    </p>
+  </div>
+</div>
+
+<h4>XPath Cheat Sheet</h4>
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class=col-md-4>
+        <code>node</code>
+      </div>
+      <div class=col-md-8>
+        selects all nodes named "node"
+      </div>
+      <div class=col-md-4>
+        <code>/node</code>
+      </div>
+      <div class=col-md-8>
+        selects root "nodes"
+      </div>
+      <div class=col-md-4>
+        <code>//node</code>
+      </div>
+      <div class=col-md-8>
+        selects all nodes (deep search)
+      </div>
+      <div class=col-md-4>
+        <code>//node/child</code>
+      </div>
+      <div class=col-md-8>
+        selects "child" from root "node"
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="row">
+      <div class=col-md-4>
+        <code>.</code>
+      </div>
+      <div class=col-md-8>
+        current node
+      </div>
+      <div class=col-md-4>
+        <code>..</code>
+      </div>
+      <div class=col-md-8>
+        parent node
+      </div>
+      <div class=col-md-4>
+        <code>//@attr</code>
+      </div>
+      <div class=col-md-8>
+        all attributes named "attr"
+      </div>
+      <div class=col-md-4>
+        <code>//n[@att="v"]</code>
+      </div>
+      <div class=col-md-8>
+        all "n" having attrs with given value
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="row">
+      <div class=col-md-4>
+        <code>/node[1]</code>
+      </div>
+      <div class=col-md-8>
+        first node
+      </div>
+      <div class=col-md-4>
+        <code>*</code>
+      </div>
+      <div class=col-md-8>
+        wildcard - any node
+      </div>
+      <div class=col-md-4>
+        <code>@*</code>
+      </div>
+      <div class=col-md-8>
+        any attribute
+      </div>
+      <div class=col-md-4>
+        <code>/text()</code>
+      </div>
+      <div class=col-md-8>
+        extract text from nodes
+      </div>
+    </div>
+  </div>
+</div>
+
+<h4>Modifiers</h4>
+<p class="centered">
+  <code>no modifiers</code> - returns first found entity,
+  <code>l</code> - returns all found nodes, <code>e</code> - entity, <code>k</code> - returns Keyword instead of Map, <code>s</code> - return String, <code>o</code> - optional, may return nil, <code>i</code> - integer, <code>f</code> - float
+</p>
+
+<br>
+
+<div class="row">
+  <div class="col-md-6">
+    <h5><a href="http://www.w3schools.com/xsl/xpath_syntax.asp" target="_blank">XPath reference</a></h5>
+  </div>
+  <div class="col-md-6">
+    <h5><a href="https://github.com/awetzel/sweet_xml" target="_blank">SweetXml homepage</a></h5>
+  </div>
+</div>
+

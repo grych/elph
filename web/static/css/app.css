@@ -1,0 +1,27 @@
+.small-margins {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.xpath-main {
+  padding-right: 0px;
+}
+.xpath-modifier {
+  padding-left: 0px;
+}
+.no-radius {
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+}
+.no-left-border {
+  border-left: 0px;
+}
+.font-console {
+  font-family: Consolas, Lucida Console, monospace;
+}
+h3, h4, h5 {
+  text-align: center;
+}
+.centered {
+  text-align: center;
+}
