@@ -1,6 +1,6 @@
 # ELPH
 
-## [Elixir XPath Tester Online](http://elph.tg.pl)
+## [Elixir XPath Tester Online](http://tg.pl/elph)
 
 ## Elixir XPath tester
 
