@@ -13,7 +13,7 @@ use Mix.Config
 # which you typically run after static files are built.
 config :elph, Elph.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [host: "elph.tg.pl", port: 443],
+  url: [host: "elph.tg.pl"],
   cache_static_manifest: "priv/static/manifest.json"
 
 # Do not print debug messages in production
@@ -38,8 +38,8 @@ config :logger, level: :info
 # We also recommend setting `force_ssl`, ensuring no data is
 # ever sent via http, always redirecting to https:
 #
-#     config :elph, Elph.Endpoint,
-#       force_ssl: [hsts: true]
+    # config :elph, Elph.Endpoint,
+    #   force_ssl: [hsts: true]
 #
 # Check `Plug.SSL` for all available options in `force_ssl`.
 
