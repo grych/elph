@@ -1,7 +1,7 @@
 defmodule Elph.Endpoint do
   use Phoenix.Endpoint, otp_app: :elph
 
-  socket "/socket", Elph.UserSocket
+  socket "/elph/socket", Elph.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
