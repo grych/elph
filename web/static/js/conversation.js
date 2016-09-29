@@ -4,7 +4,7 @@ import {Socket} from "phoenix"
 let Conversation = {
   channel: null,
   init(channel_name){
-    let socket = new Socket("/socket", {params: {token: window.userToken}})
+    let socket = new Socket("/elph/socket", {params: {token: window.userToken}})
     socket.connect()
 
     let ch = socket.channel(channel_name, {})
