@@ -8,7 +8,7 @@ import uuid from "node-uuid"
 let my_uuid = uuid.v1()
 var conversation
 
-$.get("/create_channel", {my_uuid: my_uuid})
+$.get("/elph/create_channel", {my_uuid: my_uuid})
   .done((data) => {
     let channel_id = data["channel_id"]
     conversation = Conversation.init(channel_id)

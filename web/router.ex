@@ -13,7 +13,10 @@ defmodule Elph.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", Elph do
+  # The whole application is under /elph
+  # You will need to change Endpoint Plug.Static
+  # and static_url: [path: "/elph"] in config.exs
+  scope "/elph/", Elph do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
