@@ -11,7 +11,8 @@ config :elph, Elph.Endpoint,
   secret_key_base: "xIOK6V6V4eEKZgaZBu9DhcVjoRO4E3VFFsMVKiBc+HzaXi/+ym0muKDTCDYHN18P",
   render_errors: [view: Elph.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Elph.PubSub,
-           adapter: Phoenix.PubSub.PG2]
+           adapter: Phoenix.PubSub.PG2],
+  static_url: [path: "/elph"]
 
 # Configures Elixir's Logger
 config :logger, :console,
