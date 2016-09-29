@@ -19,7 +19,7 @@
     </div>
   </div>
   <div class="col-xs-1">
-    <button id="run" class="form-control btn btn-success btn-primary">Run</button>
+    <button id="run" class="form-control btn btn-success btn-primary">Go</button>
   </div>
 </div>
 <div class="row">
