@@ -17,6 +17,7 @@ defmodule Elph.Router do
   # You will need to change Endpoint Plug.Static
   # and static_url: [path: "/elph"] in config.exs
   # and in endpoint in channel "/socket"
+  # as well in socket.js
   scope "/elph/", Elph do
     pipe_through :browser # Use the default browser stack
 
