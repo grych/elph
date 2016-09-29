@@ -14,8 +14,7 @@ use Mix.Config
 config :elph, Elph.Endpoint,
   http: [port: {:system, "PORT"}],
   url: [host: "elph.tg.pl"],
-  cache_static_manifest: "priv/static/manifest.json",
-  static_url: [path: "/elph"],
+  cache_static_manifest: "priv/static/manifest.json"
 
 # Do not print debug messages in production
 config :logger, level: :info
