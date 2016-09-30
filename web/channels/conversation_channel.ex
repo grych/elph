@@ -16,7 +16,8 @@ defmodule Elph.ConversationChannel do
     end
   end
 
-  def handle_in("compute_xpath", %{"xpath" => xpath, "xpath_modifiers" => xpath_modifiers, "xml" => xml}, socket) do
+  def handle_in("compute_xpath", 
+    %{"xpath" => xpath, "xpath_modifiers" => xpath_modifiers, "xml" => xml, "output_width" => output_width}, socket) do
     input = %Elph.XpathProcessor.Input{xml: xml, xpath: xpath, xpath_modifiers: xpath_modifiers}
     
     ret_string = case Elph.XpathProcessor.compute(input) do
@@ -31,7 +32,7 @@ defmodule Elph.ConversationChannel do
       _ -> "Unknown error, sorry."
     end
 
-    response = %{"status" => "ok", "output" => inspect(ret_string, pretty: true, width: 60)}
+    response = %{"status" => "ok", "output" => inspect(ret_string, pretty: true, width: output_width)}
     # send the text response back - JS will display it in #output
     broadcast socket, "compute_xpath_response", response
     {:noreply, socket}

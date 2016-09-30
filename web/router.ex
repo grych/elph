@@ -13,6 +13,9 @@ defmodule Elph.Router do
     plug :accepts, ["json"]
   end
 
+  scope "/" do
+    get "/", Elph.PageController, :redirect_to_elph
+  end
   # The whole application is under /elph
   # You will need to change Endpoint Plug.Static
   # and static_url: [path: "/elph"] in config.exs

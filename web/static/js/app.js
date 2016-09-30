@@ -3,6 +3,7 @@ import "phoenix_html"
 // import $ from "jquery"
 import Conversation from "./conversation"
 import { throttle } from "./throttle"
+import { getTextWidth } from "./helpers"
 import uuid from "node-uuid"
 
 let my_uuid = uuid.v1()
@@ -40,7 +41,9 @@ function compute_xpath() {
   {
     xpath: $("#xpath").val(), 
     xpath_modifiers: $("#xpath_modifiers").val(),
-    xml: $("#xml").val()
+    xml: $("#xml").val(), 
+    // calculate the width of the output pane, measured in number of characters (it is fixed-width)
+    output_width: Math.floor($("#output").width() / getTextWidth("x", $("#output").css("font"))) 
   })
     .receive("error", e => show_error("Can't connect to the server: #{e}") )
     // .receive("ok", resp => { console.log("Got response", resp) })

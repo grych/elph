@@ -12,4 +12,8 @@ defmodule Elph.PageController do
     channel_id = "conversation:" <> his_uuid
     render conn, "create_channel.json", channel_id: channel_id
   end
+
+  def redirect_to_elph(conn, _params) do
+    redirect conn, to: "/elph"
+  end
 end
